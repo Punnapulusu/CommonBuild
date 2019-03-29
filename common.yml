@@ -14,8 +14,9 @@ jobs:
 
 - job: ArchiveFiles@2
   displayName: 'Archive files'
-  rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
-  includeRootFolder: false
+  steps:
+  - rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
+  - includeRootFolder: false
 
 - job: PublishBuildArtifacts@1
   displayName: 'Publish artifacts: drop'
