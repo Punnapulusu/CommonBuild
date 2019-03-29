@@ -8,7 +8,7 @@ jobs:
 - job: Build
   pool:
     vmImage: ${{ parameters.vmImage }}
-  steps:
+steps:
   - script: npm install
   - script: npm test
   - task: ArchiveFiles@2
