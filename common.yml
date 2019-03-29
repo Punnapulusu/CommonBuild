@@ -1,6 +1,6 @@
 
 jobs: 
-  - displayName: "Install Node.js"
+  
     job: NodeTool@0
   - job: Build
     pool: 
@@ -8,7 +8,6 @@ jobs:
     steps: 
       - script: "npm install"
       - script: "npm test"
-      - displayName: "Archive files"
         inputs: 
           includeRootFolder: false
           rootFolderOrFile: $(System.DefaultWorkingDirectory)
