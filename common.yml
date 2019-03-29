@@ -1,13 +1,12 @@
 parameters:
   vmImage: 'ubuntu 16.04'
 
-steps:
-- task: NodeTool@0
+jobs:
+- job: NodeTool@0
   inputs:
     versionSpec: '8.x'
   displayName: 'Install Node.js'
-
-jobs:
+  
 - job: Build
   pool:
     vmImage: ${{ parameters.vmImage }}
@@ -15,11 +14,11 @@ jobs:
   - script: npm install
   - script: npm test
 
-- task: ArchiveFiles@2
+- job: ArchiveFiles@2
   displayName: 'Archive files'
   inputs:
     rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
     includeRootFolder: false
 
-- task: PublishBuildArtifacts@1
+- job: PublishBuildArtifacts@1
   displayName: 'Publish artifacts: drop'
