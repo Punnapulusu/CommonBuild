@@ -3,8 +3,7 @@ parameters:
 
 jobs:
 - job: NodeTool@0
-  inputs:
-    versionSpec: '8.x'
+  versionSpec: '8.x'
   displayName: 'Install Node.js'
   
 - job: Build
