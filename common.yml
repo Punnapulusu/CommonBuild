@@ -3,19 +3,14 @@ jobs:
   - 
     displayName: "Install Node.js"
     job: NodeTool@0
-  - 
-    job: Build
+  - job: Build
     pool: 
       vmImage: "${{ parameters.vmImage }}"
     steps: 
-      - 
-        script: "npm install"
-      - 
-        script: "npm test"
-      - 
-        displayName: "Archive files"
+      - script: "npm install"
+      - script: "npm test"
+      - displayName: "Archive files"
         inputs: 
           includeRootFolder: false
           rootFolderOrFile: $(System.DefaultWorkingDirectory)
-        task: ArchiveFiles@2
-  -
+      - task: ArchiveFiles@2
