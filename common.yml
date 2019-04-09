@@ -28,6 +28,6 @@ jobs:
     inputs:
         command: 'publish'
         publishRegistry: 'useFeed'
-        publishFeed: 'node-express-azure'
+        publishFeed: 'WellsArtifactory'
         #targetPath: '$(Build.ArtifactStagingDirectory)'
         #artifactName: node-express-azure
