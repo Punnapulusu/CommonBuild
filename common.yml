@@ -16,6 +16,10 @@ jobs:
      npm test
     displayName: 'npm test'
 
+  - script: |
+     npm start
+    displayName: 'npm start'
+
   - task: ArchiveFiles@2
     displayName: 'Archive files'
     inputs:
@@ -24,3 +28,6 @@ jobs:
 
   - task: PublishBuildArtifacts@1
     displayName: 'Publish artifacts: drop'
+    inputs:
+        targetPath: '$(Build.ArtifactStagingDirectory)'
+        artifactName: node-express-azure
