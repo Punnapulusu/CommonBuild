@@ -8,3 +8,8 @@ jobs:
   steps:
   - script: npm install
   - script: npm test
+  - task: Npm@1
+    inputs:
+      command: publish
+      publishRegistry: useFeed
+      publishFeed: Artifacts
