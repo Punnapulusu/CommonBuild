@@ -11,5 +11,5 @@ jobs:
   - task: Npm@1
     inputs:
       command: publish
-      publishRegistry: useFeed
+      publishRegistry: node-express-azure
       publishFeed: Artifacts
