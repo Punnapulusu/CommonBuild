@@ -16,10 +16,6 @@ jobs:
      npm test
     displayName: 'npm test'
 
-  - script: |
-     npm start
-    displayName: 'npm start'
-
   - task: ArchiveFiles@2
     displayName: 'Archive files'
     inputs:
