@@ -22,12 +22,12 @@ jobs:
       rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
       includeRootFolder: false
 
-      #- task: PublishBuildArtifacts@1
-  - task: Npm@1
-    displayName: 'Publish artifacts'
-    inputs:
-        command: 'publish'
-        publishRegistry: 'useFeed'
-        publishFeed: 'WellsArtifactory'
+     #- task: PublishBuildArtifacts@1
+  #- task: Npm@1
+   # displayName: 'Publish artifacts'
+    #inputs:
+      #  command: 'publish'
+       # publishRegistry: 'useFeed'
+        #publishFeed: 'WellsArtifactory'
         #targetPath: '$(Build.ArtifactStagingDirectory)'
         #artifactName: node-express-azure
