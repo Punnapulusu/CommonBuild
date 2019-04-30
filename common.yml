@@ -22,9 +22,13 @@ jobs:
       rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
       includeRootFolder: false
       
-   - task: PublishBuildArtifacts@1
-     displayName: 'Publish artifacts: drop'
-
+ - task: ArchiveFiles@2
+  displayName: 'Archive files'
+  inputs:
+    rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
+    includeRootFolder: false
+    
+    
      #- task: PublishBuildArtifacts@1
   #- task: Npm@1
    # displayName: 'Publish artifacts'
